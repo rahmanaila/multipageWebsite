@@ -1,0 +1,136 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+* {
+    color: inherit;
+}
+
+.body {
+    background-color: #eaeaea;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 8%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.navbar a {
+    display: inline-block;
+    font-size: 18px;
+    color: #222;
+    text-decoration: none;
+    font-weight: 500;
+    margin: 0 20px;
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.logo {
+    font-size: 25px;
+    color: #222;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+.navbar a:hover,
+.navbar a.active{
+    color: orange;
+}
+
+.home {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 50px 8% 0;
+
+}
+
+.socialmedia {
+    font-size: 30px;
+    color: #222;
+    animation: slideSci .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+h1,p{
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.4s * var(--i));
+}
+
+span {
+    color: orange;
+}
+
+.image {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-right: 70px;
+    animation: slideTop .5s ease forwards;
+}
+
+.image img{
+    height: 350px;
+    width: 350px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 10px solid darkblue;
+}
+
+footer {
+    text-align: center;
+    border: 5px solid orange;
+    background-color: orange;
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideSci {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
